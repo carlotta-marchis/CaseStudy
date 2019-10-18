@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 np.random.seed(123) # initializes random numbers
 all_walks = [] # initializes all_walks
 
-for i in range(10) : # simulates random_walk 10 times
+for i in range(250) : # simulates random_walk 250 times
     random_walk = [0] # initializes the random_walk
     
     for i in range(100) : # iterates 100 times
@@ -26,6 +26,9 @@ for i in range(10) : # simulates random_walk 10 times
             step += 1
         else :
             step += np.random.randint(1,7)
+            
+        if np.random.rand() <= 0.001 : # implements clumsiness
+            step = 0
             
         random_walk.append(step) # updates the last step
 
