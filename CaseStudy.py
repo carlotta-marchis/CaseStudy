@@ -42,3 +42,12 @@ plt.clf()
 np_aw_t = np.transpose(np_aw)
 plt.plot(np_aw_t)
 plt.show()
+plt.clf()
+
+last_step = np_aw_t[-1,:] # select only the last step from each random_walk
+plt.hist(last_step)
+plt.show()
+
+print(np.mean(last_step >= 60)) # This gives you the probability of reaching the 60th step after 100 dice rolls
+# Note: last_step >= 60 generates an array of booleans, then you take the mean and obtain the probability you wanted
+# print(last_step >= 60)
