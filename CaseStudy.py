@@ -12,4 +12,5 @@ import numpy as np
 np.random.seed(123) #initializes random numbers
 
 for i in 'casa' :
-    print(np.random.rand())
+    print(np.random.int(0,6))
+    
